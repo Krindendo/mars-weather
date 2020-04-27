@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { getWeather } from "./services/weatherApi";
+import Loading from "./components/Loading";
+import WeatherPage from "./components/WeatherPage";
 
 function App() {
+  const [data, setData] = useState([]);
+  const loadData = async () => {
+    const d = await getWeather();
+    console.log("Data", d);
+    setData(d);
+  };
+  useEffect(() => {
+    // loadData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data ? <WeatherPage data={data} /> : <Loading />}
+      <div className="credit">
+        <p>This is legit photo from Mars</p>
+        <p>Photo by Nicolas Lobos on Unsplash</p>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+// Photo by Nicolas Lobos on Unsplash
