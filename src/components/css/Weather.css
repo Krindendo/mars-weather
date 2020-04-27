@@ -1,2 +1,59 @@
 .weatherpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  height: 100%;
+}
+
+.weatherpage__box {
+  width: 1200px;
+}
+
+.none {
+  display: none;
+}
+
+.weatherpage__box__h2 {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.today {
+  display: flex;
+  margin: 2em 0;
+}
+
+.today__sol {
+  margin: 0 7em 0 4em;
+  text-align: center;
+}
+.today__sol__sol {
+  font-size: 1.7rem;
+}
+
+.today__sol__day {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.today__temperature {
+}
+
+.today__temperature__h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.slash {
+  font-size: 1.1em;
+}
+.active {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.weatherpage__box__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
