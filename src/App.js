@@ -5,14 +5,13 @@ import Loading from "./components/Loading";
 import WeatherPage from "./components/WeatherPage";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
   const loadData = async () => {
     const d = await getWeather();
-    console.log("Data", d);
     setData(d);
   };
   useEffect(() => {
-    // loadData();
+    loadData();
   }, []);
 
   return (

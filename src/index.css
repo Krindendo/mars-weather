@@ -44,3 +44,8 @@ a {
   outline: 3px solid black;
   outline-offset: 3px;
 }
+
+::selection {
+  background-color: rgb(150, 0, 0);
+  color: white;
+}

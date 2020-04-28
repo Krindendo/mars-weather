@@ -1,17 +1,17 @@
 import React from "react";
 import "./css/Card.css";
 
-const Card = (sol, day, high, low) => {
+const Card = ({ sol, day, high, low, celsius }) => {
   return (
     <div className="card">
-      <p className="card__sol">Sol 400</p>
-      <p className="card__day">April 24</p>
-      <div className="line"></div>
-      <p className="high">
-        25 <span>C</span>
+      <p className="card__sol">{sol}</p>
+      <p className="card__day">{day}</p>
+      <div className="card__line"></div>
+      <p className="card__high">
+        High: {high} {celsius ? "C" : "F"}
       </p>
-      <p className="low">
-        -120 <span>C</span>
+      <p className="card__low">
+        Low: {low} {celsius ? "C" : "F"}
       </p>
     </div>
   );
