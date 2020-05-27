@@ -26,5 +26,3 @@ function App() {
 }
 
 export default App;
-
-// Photo by Nicolas Lobos on Unsplash

@@ -13,7 +13,7 @@ const WeatherPage = ({ data }) => {
   useEffect(() => {
     setTimeout(() => {
       setDownloaded(true);
-    }, 15500);
+    }, 12500);
   }, []);
   return (
     <section className="weatherpage">
@@ -27,7 +27,6 @@ const WeatherPage = ({ data }) => {
         </h2>
         <h2 className="weatherpage__box__h2">Season: {data[6][4]}</h2>
         <h2 className="weatherpage__box__h2">Receiving data ...</h2>
-        <h2 className="weatherpage__box__h2">Data received</h2>
         <div className={downloaded ? "today" : "today none"}>
           <div className="today__sol">
             <h3 className="today__sol__sol">Sol {data[6][0]}</h3>

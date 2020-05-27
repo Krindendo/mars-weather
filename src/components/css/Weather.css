@@ -113,16 +113,6 @@
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.weatherpage__box__h2:nth-child(6) {
-  width: 8em;
-  opacity: 0;
-  -webkit-animation: type 2s steps(20, end);
-  animation: type 2s steps(20, end);
-  -webkit-animation-delay: 13s;
-  animation-delay: 13s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
 
 @keyframes type {
   0% {
